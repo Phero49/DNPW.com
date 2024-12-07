@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Slab:wght@100..900&family=SUSE:wght@100..800&display=swap');
+
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(63, 34, 4, 0.377)), url('../Images/About.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", system-ui;
+}
+
+/* Profile Section Styling */
+.profile-section {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 80%;
+    margin-top: -25px;
+    margin-bottom: -35px;
+}
+
+.profile-section h2 {
+    font-size: 24px;
+    color: #181818;
+    margin-bottom: 20px;
+    font-weight: bold;
+    opacity: 100%;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgb(0, 165, 0);
+}
+
+.profile-section p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.profile-section p strong {
+    color: #333;
+}
+
+.profile-buttons {
+    margin-top: 20px;
+}
+
+.profile-buttons .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+.profile-buttons .delete-btn {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.profile-buttons .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.logout-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #006b00;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover{
+    background-color: #14aa00;
+}
+
+.edit-profile-container{
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(100deg, #16919B, #80ED99);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.edit-profile-form input[type="text"],
+.edit-profile-form input[type="email"],
+.edit-profile-form input[type="file"],
+.edit-profile-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #ffffff7e;
+    font-size: medium;
+}
+
+.edit-profile-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #009905;
+    color: white;
+    font-size: medium;
+}
+
+.edit-profile-form button:hover {
+    background-color: #3e8e41;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+}
+
+.btn-back:hover {
+    background-color: #d32f2f;
+}

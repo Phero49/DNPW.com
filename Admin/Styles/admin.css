@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Slab:wght@100..900&family=SUSE:wght@100..800&display=swap');
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.671), rgba(63, 34, 4, 0.377)), url('../../Images/About.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", system-ui;
+}
+
+/* Navbar Styles */
+nav {
+    height: 70px;
+    background: linear-gradient(to right, #0B6477, #14919B);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+nav img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+
+nav img:hover {
+    transform: scale(1.05);
+}
+
+.adminPage {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    min-height: 100vh;
+    text-align: center;
+    color: #ddd;
+}
+
+.adminPage h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.adminPage button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0B6477;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.adminPage button:hover {
+    background-color: #0AD1C8;
+    color: #0B6477;
+}
+
+footer {
+    background: linear-gradient(to left, #0B6477, #14919B);
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Alert Box */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    font-size: medium;
+    color: #003b3f;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #d11a1a;
+}
+
+/* Basic form styling */
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.button-container input {
+    margin: 10px;
+}
+
+form input {
+    margin-left: 5%;
+}
+
+/* End of Alert Box */
+
+.loginPage {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Box {
+    width: 400px;
+    margin: 0px auto;
+    padding: 40px;
+    background-color: white;
+    background: linear-gradient(100deg, #16919B, #80ED99);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.loginPage h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container input {
+    width: 48%;
+    padding: 10px;
+    border-color: aliceblue;
+    border-radius: 50px;
+    background-color: #006a72;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container input[type="reset"] {
+    background-color: #01a32f;
+}
+
+.button-container input:hover {
+    opacity: 0.6;
+    background-color: whitesmoke;
+    color: #213A57;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background: linear-gradient(#0B6477, #14919B);
+    color: #fff;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table tbody tr {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table td {
+    color: #333;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+
+.table {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.copy-icon {
+    display: none;
+    cursor: pointer;
+    margin-left: 10px;
+    color: teal;
+    font-size: 18px;
+}
+
+tr:hover .copy-icon {
+    display: inline-block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(100deg, #16919B, #80ED99);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form label {
+    font-weight: bold;
+    color: #333;
+    align-items: center;
+}
+
+.edit-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.edit-form input[type="text"]:focus {
+    border-color: #5ca0d3;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form button[type="submit"],
+.edit-form button[type="button"] {
+    padding: 10px 15px;
+    margin-top: 5PX;
+    border: none;
+    background-color: #156c77;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form button[type="submit"]:hover,
+.edit-form button[type="button"]:hover {
+    background-color: #0d4d5a;
+}
+
+.edit-form button[type="button"] {
+    background-color: #e74c3c;
+}
+
+.edit-form button[type="button"]:hover {
+    background-color: #c0392b;
+}
+
+.edit-form div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.edit-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 30px;
+}
+
+.adminPage h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin-bottom: 50px;
+}
+
+ul li {
+    background-color: #FFFFFF; /* White background for file effect */
+    border: 1px solid #E3F2FD;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul li::before {
+    content: "\f15c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 3rem;
+    color: #ff0000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+ul li a {
+    display: block;
+    color: #213A57;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
