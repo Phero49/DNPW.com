@@ -76,12 +76,11 @@ $error = false;
 
                             // echo "Login successful. Welcome!";
                             // Redirect to a protected page
-                            header("Location: dashboard.php");
+                            header("Location: adminPage.php");
                             exit;
                         } 
                        }
                       else {
-                            echo "Login failed  )".$user['password_hash'];
 
                             // Invalid credentials
                             $error = true;
