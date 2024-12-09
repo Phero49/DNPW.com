@@ -1,3 +1,11 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once "./Database/dbConfig.php";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
