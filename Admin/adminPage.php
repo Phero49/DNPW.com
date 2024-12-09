@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id'])) {
 
 }
 else {
-header('./adminLogin.php');
+header('Location:./adminLogin.php');
 }
 
 ?>
