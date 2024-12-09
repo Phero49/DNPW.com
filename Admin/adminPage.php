@@ -135,6 +135,9 @@ if (isset($_SESSION['user_id'])) {
     </main>
 
     <script src="../Scripts/uploadImages.js"></script>
+    <footer>
+        <p>&copy; Department of Parks and worldlife 2024</p>
+    </footer>
 
 </body>
 
