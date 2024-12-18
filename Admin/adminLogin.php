@@ -76,7 +76,7 @@ $error = false;
 
                             // echo "Login successful. Welcome!";
                             // Redirect to a protected page
-                            header("Location: adminPage.php");
+                            header("Location:dashboard.php?page=images");
                             exit;
                         } 
                        }
