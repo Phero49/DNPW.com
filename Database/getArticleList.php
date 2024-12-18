@@ -8,7 +8,7 @@ if (isset($_GET['published'])) {
     $published = $_GET['published'];  // e.g., '1' for published, '0' for unpublished
 
     // Prepare SQL query to retrieve title, cover, and preview
-    $sql = "SELECT `title`, `cover`, `content` FROM `news` WHERE `published` = ?";
+    $sql = "SELECT `id`, `title`, `cover`, `content` FROM `news` WHERE `published` = ?";
 
     // Prepare the statement
     $stmt = $pdo->prepare($sql);
@@ -29,6 +29,7 @@ if (isset($_GET['published'])) {
         // Add the article info (title, cover, preview) to the result array
         $result[] = [
             'title' => $article['title'],
+            'id' => $article['id'],
             'cover' => $article['cover'],
             'preview' => $preview . (strlen($preview) < strlen($article['content']) ? '...' : ''), // Add "..." if preview is truncated
         ];
