@@ -14,9 +14,17 @@ if (isset($_SESSION['user_id'])) {
 if (isset($_POST['content']) && isset($_POST['id'])) {
     $content = $_POST['content'];
     $id = $_POST['id'];
+    $published = $_POST['published'];
 
     // Prepare the SQL query to update the content
-    $sql = "UPDATE `news` SET `content` = ?, `user_id` = ? WHERE `id` = ?";
+    if (isset($published)) {
+
+        $sql = "UPDATE `news` SET `content` = ?, `user_id` = ?, `published`=1, `published_date`=NOW() WHERE `id` = ?";
+
+    }else{
+            $sql = "UPDATE `news` SET `content` = ?, `user_id` = ? WHERE `id` = ?";
+
+    }
     
     try {
         // Use a prepared statement to update the data securely
