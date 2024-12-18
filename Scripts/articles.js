@@ -5,6 +5,7 @@ function fetchArticles(publishedStatus) {
         .then(data => {
             if (data.length > 0) {
                     data.forEach(element => {
+                    element['url'] = publishedStatus == 0 ?`../Admin/editor.php?article=${element['id']}`:''
                 renderArticleCard(element)
             });
             }else{
