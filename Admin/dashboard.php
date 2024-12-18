@@ -35,7 +35,7 @@ if (isset($_SESSION['user_id'])) {
     <label for="menu-toggle" class="hamburger">&#9776;</label>
     <ul class="menu">
       <li><a href="?page=images">manage images</a></li>
-      <li><a href="?page=news">manage news</a></li>
+      <li><a href="?page=news#drafts">manage news</a></li>
       <li><a href="?page=projects">manage projects</a></li>
       <?php
       if (isset($_SESSION['userName'])) {
