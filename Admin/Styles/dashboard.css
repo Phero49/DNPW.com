@@ -1,0 +1,113 @@
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to right, #8CBC4C, #1B6F2D);
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+.sidebar-header h2 {
+    color: white;
+    font-size: 24px;
+    
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+
+  .nav-item:hover {
+    background-color: #555;
+  }
+  
+  .sub-menu {
+    list-style-type: none;
+    display: none;
+    margin-left: 20px;
+  }
+  
+  .sub-menu li a {
+    font-size: 16px;
+  }
+  
+  .nav-item:hover .sub-menu {
+    display: block;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    margin-left: 200px;
+    padding: 20px;
+   
+    flex: 1;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      height: 100%;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 15px;
+    }
+  
+    /* Collapsing sidebar on mobile */
+    .sidebar.collapsed {
+      width: 0;
+    }
+  
+    .nav-item {
+      font-size: 16px;
+    }
+  
+    .sub-menu {
+      margin-left: 10px;
+    }
+  
+    .toggle-sidebar {
+      display: block;
+      background-color: #333;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      margin: 10px;
+    }
+  }
+
+  /* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+  }

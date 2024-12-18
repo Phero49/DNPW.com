@@ -43,7 +43,7 @@ quill.on('text-change', () => {
     const formData = new FormData();
     formData.append("id",articleId)
     formData.append('content', content);
-
+    
     // Send the content to the server via fetch
     fetch('../Database/saveContent.php', {
       method: 'POST',
@@ -66,6 +66,7 @@ quill.on('text-change', () => {
 
 onload = (e)=>{
  const article =  document.body.getAttribute('article')
+ console.log('hello world')
  if (article != null) {
   articleId = article
   fetch('../Database/getArticle.php?article_id='+article)
@@ -90,6 +91,70 @@ onload = (e)=>{
       alert('Publish button clicked! Content: \n' + content);
       // Add your "publish" logic here (e.g., send content to server)
   });
+
+  function extractTitleAndCover() {
+    const editorContent = document.querySelector('.ql-editor'); // Access the Quill editor content
+
+    let title = '';
+    let cover = ''
+    let preview = ''
+
+    // Check for <h1> first, then <h2>, and fallback to the first <p>
+    const h1 = editorContent.querySelector('h1');
+    const h2 = editorContent.querySelector('h2');
+    const p = editorContent.querySelector('p');
+
+    if (h1) {
+        title = h1.textContent;
+    } else if (h2) {
+        title = h2.textContent;
+    } else if (p) {
+        // Fallback to the first 4 words from the first <p>
+        const firstParagraph = p.textContent.trim();
+        preview = firstParagraph
+        const words = firstParagraph.split(/\s+/);
+        title = words.slice(0, 4).join(' ') + (words.length > 4 ? '...' : '');
+    }
+
+    // Check for the first <img> tag and extract the src
+    const img = editorContent.querySelector('img');
+    if (img) {
+        cover = img.src;
+    }
+
+    return { title, cover ,preview};
+}
+function updateArticleTitleAndCover(articleId, title, cover,preview) {
+  // Prepare the data to send
+  const formData = new FormData();
+  formData.append('article_id', articleId);
+  formData.append('title', title);
+  formData.append('cover', cover);
+  formData.append('preview',preview)
+  // Send the POST request to update the article
+  fetch('../Database/updateArticleMeta.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+      // Handle the response from the server
+      console.log(data); // Display the success/error message
+  })
+  .catch(error => {
+      console.error('Error updating article:', error);
+
+    });
+}
+
+window.addEventListener('beforeunload',(event)=>{
+   event.preventDefault()
+    const {cover,title,preview} = extractTitleAndCover()
+    updateArticleTitleAndCover(articleId,title,cover,preview) 
+    
+     alert('Do you really want to leave without saving')
+})
+
 
 
 
